@@ -1,37 +1,55 @@
-# Evaluating-E-Commerce-Platform-Performance-A-Statistical-Analysis-of-Bounce-and-Conversion-Rates-
-## Purpose
-Evaluate user engagement (bounce rate) and conversion efficiency for a website using session data and industry benchmarks (Mobiloud 2025, Adobe 2023), providing data-driven insights and recommendations for optimization.
----
+# E-commerce Engagement & Conversion Performance Analysis
 
-## Tools & Packages
-- **R** with:
-  - `tidyverse` (`dplyr`, `readr`)
-  - `stats` (t-test, binomial test)
-  - `ggplot2`
-- **Data Sources**:
-  - Mobiloud (2025) bounce rate benchmark
-  - Adobe (2023) conversion rate benchmark
+## Purpose  
+To evaluate a platform's user engagement and conversion performance using statistical hypothesis testing. The analysis benchmarks bounce and conversion rates from 12,330 e-commerce sessions against industry standards (Mobiloud, 2025; Adobe, 2023) to assess platform efficiency and identify actionable optimization strategies.
 
----
+## Tools & Packages  
+**Data Cleaning & Analysis:** `dplyr`, `tidyr`, `stats`  
+**Visualization:** `ggplot2`, `plotly`  
+**Statistical Tests:**  
+- One-sample left-tailed *t*-test for bounce rate  
+- One-sample right-tailed binomial test for conversion rate  
 
-## Techniques & Workflow
-- **Data Standardization & Validation**: Processed 12,330 session records to calculate bounce and conversion rates; benchmarked against Mobiloud (2025) and Adobe (2023) standards.
-- **Statistical Testing**:
-  - **One-sample left-tailed t-test** on bounce rates (H₀: μ = 45.68%) → t = –995.27, p < 0.001 confirming bounce rate (~2.22%) is significantly below industry average.
-  - **One-sample right-tailed exact binomial test** on conversions (p₀ = 3.65%) → observed 15.47%, p < 0.001, 95% CI lower bound = 14.9%, indicating conversion rate exceeds benchmark by over 4×.
-- **Data Visualization**: Employed `ggplot2` to illustrate:
-  - **Histogram** of session bounce rates vs. benchmark
-  - **Bar chart** of conversion rates with confidence intervals
-  - **Funnel diagram** showcasing drop-off and conversion steps
+## Project Overview  
+Standardized and validated bounce and conversion metrics across 12,330 sessions. Applied statistical inference to compare performance with accepted benchmarks:
+- **Bounce Rate Benchmark:** 45.68% (Mobiloud, 2025)  
+- **Conversion Rate Benchmark:** 3.65% (Adobe, 2023)  
 
----
+## Engagement Performance: Bounce Rate Analysis  
+- **Observed Mean Bounce Rate:** 2.22%  
+- **Industry Benchmark:** 45.68%  
+- **Test:** One-sample left-tailed *t*-test  
+- **Results:**  
+  - *t* = –995.27  
+  - *p* < 0.001  
+  - 95% CI: (–∞, 0.02229)
 
-## Key Insights
-- **Exceptional Engagement**: Bounce rate of ~2.22% vastly outperforms the 45.68% benchmark, reflecting highly engaging landing experiences.
-- **High Conversion Efficiency**: Conversion rate of 15.47% (≥14.9% lower CI) is more than four times the 3.65% industry standard, indicating an optimized purchase funnel.
-- **Strategic Recommendations**:
-  - Implement targeted **A/B testing** on landing page elements.
-  - Conduct **user-segmentation analyses** to sustain low bounce among diverse audiences.
-  - Establish **continuous monitoring** via dashboards to track key metrics over time.
+### Insight  
+The bounce rate is **significantly lower** than the industry average, indicating exceptional user engagement. This suggests effective landing page design, intuitive navigation, and compelling content that encourage users to stay and explore the site.
 
+## Conversion Performance: Sales Funnel Analysis  
+- **Observed Conversion Rate:** 15.47%  
+- **Industry Benchmark:** 3.65%  
+- **Test:** One-sample right-tailed binomial test  
+- **Results:**  
+  - *p* < 0.001  
+  - 95% one-sided CI: [14.9%, 100%]
 
+### Insight  
+The conversion rate is **more than four times** the industry average, reflecting an optimized user experience and high purchase efficiency. The result suggests strong product-market fit, effective trust-building, and streamlined checkout flow.
+
+## Forecasting & Optimization Recommendations  
+- **A/B Testing:** Evaluate landing page elements, calls to action, and checkout UX to identify performance drivers.  
+- **User Segmentation:** Analyze behavior by device type, traffic source, and user status (new vs. returning).  
+- **Monitoring:** Continuously track bounce and conversion rates to detect seasonal or campaign-based changes.  
+- **Sustainability:** Investigate whether current performance is short-term (e.g., promotions) or reflective of long-term design quality.
+
+## Actionable Insight  
+- The platform **greatly outperforms** standard e-commerce metrics.  
+- Stakeholders should **leverage this strong foundation** through targeted experimentation and deeper UX analysis to maintain and improve performance.  
+- Further study is encouraged to **identify causality**, ensuring that what works today continues to work tomorrow.
+
+## Data Sources  
+- Mobiloud. (2025). Average bounce rate for ecommerce. [mobiloud.com/blog](https://www.mobiloud.com/blog/average-bounce-rate-for-ecommerce)  
+- Adobe. (2023). Ecommerce conversion benchmarks. [business.adobe.com](https://business.adobe.com/blog/basics/ecommerce-conversion-rate-benchmarks)  
+- UCI Machine Learning Repository. (2018). [Online shoppers purchasing intention dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
