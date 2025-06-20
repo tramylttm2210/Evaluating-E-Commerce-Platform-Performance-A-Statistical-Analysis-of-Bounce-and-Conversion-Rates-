@@ -16,26 +16,11 @@ Standardized and validated bounce and conversion metrics across 12,330 sessions.
 - **Conversion Rate Benchmark:** 3.65% (Adobe, 2023)  
 
 ## Engagement Performance: Bounce Rate Analysis  
-- **Observed Mean Bounce Rate:** 2.22%  
-- **Industry Benchmark:** 45.68%  
-- **Test:** One-sample left-tailed *t*-test  
-- **Results:**  
-  - *t* = –995.27  
-  - *p* < 0.001  
-  - 95% CI: (–∞, 0.02229)
-
-### Insight  
+ 
 The bounce rate is **significantly lower** than the industry average, indicating exceptional user engagement. This suggests effective landing page design, intuitive navigation, and compelling content that encourage users to stay and explore the site.
 
 ## Conversion Performance: Sales Funnel Analysis  
-- **Observed Conversion Rate:** 15.47%  
-- **Industry Benchmark:** 3.65%  
-- **Test:** One-sample right-tailed binomial test  
-- **Results:**  
-  - *p* < 0.001  
-  - 95% one-sided CI: [14.9%, 100%]
-
-### Insight  
+  
 The conversion rate is **more than four times** the industry average, reflecting an optimized user experience and high purchase efficiency. The result suggests strong product-market fit, effective trust-building, and streamlined checkout flow.
 
 ## Forecasting & Optimization Recommendations  
